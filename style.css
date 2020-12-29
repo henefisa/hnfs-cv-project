@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.image-wrapper {
+  overflow: hidden;
+}
+.image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+}
+body p {
+  font-weight: 400;
+}
+body .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "sidebar content";
+  grid-template-columns: 250px 1fr;
+}
+body .container .sidebar {
+  grid-area: sidebar;
+  color: #fff;
+  background: #37474f;
+  min-height: 100vh;
+}
+body .container .sidebar .infomation .avatar {
+  text-align: center;
+  background: #263238;
+  padding: 15px;
+}
+body .container .sidebar .infomation .avatar .image-wrapper__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin: 0 auto;
+}
+body .container .sidebar .infomation .avatar .profile_name {
+  margin-top: 10px;
+}
+body .container .sidebar .infomation .avatar .profile_name .name {
+  font-size: 1.5rem;
+}
+body .container .sidebar .infomation .avatar .profile_name .job {
+  color: #bbb;
+}
+body .container .sidebar .infomation .profile_details {
+  list-style: none;
+  padding: 15px;
+  margin: 0;
+}
+body .container .sidebar .infomation .profile_details .profile_details_info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+body .container .sidebar .infomation .profile_details .profile_details_info .image-wrapper__infomation {
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  margin-right: 10px;
+}
+body .container .sidebar .section-container {
+  padding: 15px;
+}
+body .container .sidebar .section-container > section {
+  margin-bottom: 15px;
+}
+body .container .sidebar .section-container > section h2 {
+  margin-bottom: 15px;
+}
+body .container .sidebar .section-container .interests .interests_list {
+  padding: 15px;
+  list-style: circle;
+}
+body .container .content {
+  grid-area: content;
+  padding: 20px;
+}
+body .container .content .section-content {
+  margin-bottom: 30px;
+}
+body .container .content .section-content .section-header {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  margin-bottom: 10px;
+}
+body .container .content .section-content .section-header .image-wrapper__content {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  background: #263238;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-right: 5px;
+}
+body .container .content .section-content .heading-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 5px 0;
+}
+body .container .content .section-content .heading-box .left-heading,
+body .container .content .section-content .heading-box .right-heading {
+  font-weight: 500;
+}
+body .container .content .section-content .heading-box .section_content p {
+  font-weight: 300;
+}
+body .container .content .section-content.work_experience .responsibilities_list {
+  padding-left: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */

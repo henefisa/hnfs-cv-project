@@ -1,0 +1,168 @@
+$primary-margin-padding: 15px;
+$secondary-color: #263238;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.image-wrapper {
+  overflow: hidden;
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  p {
+    font-weight: 400;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: "sidebar content";
+    grid-template-columns: 250px 1fr;
+    .sidebar {
+      grid-area: sidebar;
+      color: #fff;
+      background: #37474f;
+      min-height: 100vh;
+      .infomation {
+        .avatar {
+          text-align: center;
+          background: $secondary-color;
+          padding: 15px;
+          .image-wrapper__avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            margin: 0 auto;
+          }
+          .profile_name {
+            margin-top: 10px;
+            .name {
+              font-size: 1.5rem;
+            }
+            .job {
+              color: #bbb;
+            }
+          }
+        }
+        .profile_details {
+          list-style: none;
+          padding: 15px;
+          margin: 0;
+          .profile_details_info {
+            display: flex;
+            align-items: center;
+            margin-bottom: $primary-margin-padding;
+            .image-wrapper__infomation {
+              width: 15px;
+              height: 15px;
+              margin: 0;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+      .section-container {
+        padding: $primary-margin-padding;
+        & > section {
+          margin-bottom: $primary-margin-padding;
+          h2 {
+            margin-bottom: $primary-margin-padding;
+          }
+        }
+        .objective {
+        }
+        // .skills {
+        //   .skill {
+        //     margin-bottom: $primary-margin-padding;
+        //     .skill-name {
+        //     }
+        //     .rating {
+        //       margin-top: 5px;
+        //       .star {
+        //         position: relative;
+        //         &::before {
+        //           content: "★";
+        //           width: 50px;
+        //           height: 50px;
+        //           color: #fff;
+        //           font-size: 18px;
+        //         }
+        //         &.rated::before {
+        //           color: #e6e600;
+        //         }
+        //       }
+        //     }
+        //   }
+        // }
+        .interests {
+          .interests_list {
+            padding: 15px;
+            list-style: circle;
+          }
+        }
+      }
+    }
+    .content {
+      grid-area: content;
+      padding: 20px;
+      .section-content {
+        margin-bottom: 30px;
+        .section-header {
+          display: flex;
+          align-items: center;
+          white-space: nowrap;
+          margin-bottom: 10px;
+          .image-wrapper__content {
+            width: 40px;
+            height: 40px;
+            padding: 10px;
+            background: $secondary-color;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            margin-right: 5px;
+          }
+        }
+        .heading-box {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          margin: 5px 0;
+
+          .left-heading,
+          .right-heading {
+            font-weight: 500;
+          }
+          .section_content {
+            p {
+              font-weight: 300;
+            }
+          }
+        }
+        &.education {
+        }
+        &.work_experience {
+          .responsibilities_list {
+            padding-left: 15px;
+          }
+        }
+        &.activities {
+        }
+        &.certification {
+        }
+        &.references {
+        }
+      }
+    }
+  }
+}
