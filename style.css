@@ -24,8 +24,8 @@ body .container {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-areas: "sidebar content";
-  grid-template-columns: 250px 1fr;
+  grid-template-areas: "sidebar" "content";
+  grid-template-columns: 1fr;
 }
 body .container .sidebar {
   grid-area: sidebar;
@@ -121,6 +121,12 @@ body .container .content .section-content .heading-box .section_content p {
 }
 body .container .content .section-content.work_experience .responsibilities_list {
   padding-left: 15px;
+}
+@media screen and (min-width: 564px) {
+  body .container {
+    grid-template-areas: "sidebar content";
+    grid-template-columns: 250px 1fr;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
